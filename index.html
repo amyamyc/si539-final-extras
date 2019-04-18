@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/browsericon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Montserrat|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title >Glenn's Hotdogs</title>
+</head>
+
+<body>
+
+<header>
+    <a href="#content" class="skip">Skip to content</a><br>
+    <div id= "nav">
+        <ul class= "nav">
+            <li><a class= "current" href = "index.html">Home</a></li>
+            <li><a href = "menu.html"> Menu</a></li>
+            <li><a href = "visit.html"> Visit Us</a></li>
+            <li><a href = "about.html"> About</a></li>
+            <li><a href = "thelaurel.html" >The Laurel</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+<div class= "hero storefront">
+</div>
+<div id = "content">
+  <!-- <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+  <h1 id= "text"> Welcome to Glenn's Hotdog</h1><br>
+  <p class = "center-text">Serving the Laurel District since 1945</p><br>
+  <p class = "center-text" "description">Glenn's Hotdog is a historic local eatery in the Laurel District and has resturant roots dating back to the 1940s. Glenn's Hotdog serves traditional American diner foods. We cook with the utmost care as we continue to serve our dedicated customers in the Laurel District and beyond.David and Kim have been operating Glenn's Hotdog for the past 10 years. They are a wife and husband team. </p><br>
+
+  <div class="callout">
+    <div class="callout-header"><h3>We Deliver!</h3></div>
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+    <div class="callout-container">
+      <p>Call us to place your delivery order today! 510-123-3456 </p>
+    </div>
+  </div>
+
+    <button onclick="playPause()">Play/Pause</button>
+    <video id= "video1" width="500px" height="240" autoplay>
+      <source src="kitchen.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
+      <track src="audio_desc_en.vtt" kind="descriptions" srclang="en" label="english_description">
+    </video>
+
+		  <!-- <a href="#">▶</a> -->
+
+
+
+ <!-- <button class="trigger">Click here to trigger the modal!</button>
+ <div class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h1>Hello, I am a modal!</h1>
+    </div> -->
+</div>
+</main>
+<footer>
+   © Copyright 2019, Glenns Hotdogs All Rights Reserved
+</footer>
+
+<script>
+// Modal
+    // var modal = document.querySelector(".modal");
+    // var trigger = document.querySelector(".trigger");
+    // var closeButton = document.querySelector(".close-button");
+    //
+    // function toggleModal() {
+    //     modal.classList.toggle("show-modal");
+    // }
+    //
+    // function windowOnClick(event) {
+    //     if (event.target === modal) {
+    //         toggleModal();
+    //     }
+    // }
+    //
+    // trigger.addEventListener("click", toggleModal);
+    // closeButton.addEventListener("click", toggleModal);
+    // window.addEventListener("click", windowOnClick)
+// End Modal
+
+// Video Player
+var myVideo = document.getElementById("video1");
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}
+// End Video Player
+
+// Typewriter
+  var p = document.getElementById('text'); // grabs the id "text" in variable p
+  var n = 0;
+  var str = p.innerHTML; // dictating inner html to change p variable
+
+  p.innerHTML = ''; // first it is blank
+  setInterval(function() { // The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+    n = n + 1; // incrementing 1 by 1 to write the text
+    p.innerHTML = str.slice(0, n) // start at 0, end at "n" to help incremental push the text along
+}, 80);
+// End Typewriter
+
+// Sticky Nav
+  // window.onscroll = function() {myFunction()};
+  // var nav = document.getElementById("nav");
+  // var sticky = nav.offsetTop;
+  //
+  // function myFunction() {
+  //   if (window.pageYOffset >= sticky) {
+  //     nav.classList.add("sticky")
+  //   } else {
+  //     nav.classList.remove("sticky");
+  //   }
+  // }
+
+</script>
+
+</body>
+</html>
