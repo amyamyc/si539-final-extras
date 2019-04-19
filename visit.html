@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138595314-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/browsericon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Montserrat|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title >Glenn's Hotdogs</title>
+
+<script>
+function checkForm(){
+      var valid = true
+      // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
+      if (document.getElementById("name").value == "") {
+        document.getElementById('nameError').style.display = "block"; // display errpr
+        valid = false
+      }
+      else {
+        document.getElementById('nameError').style.display = "none";
+      }
+       // valid is false when name is not present
+      if (document.getElementById("email").value == "") {
+        document.getElementById('emailError').style.display = "block";
+        valid = false
+      }
+      else {
+        document.getElementById('emailError').style.display = "none";
+      }
+      return valid
+      // if everything is good at true and if at any point, things are false, return false
+    }
+</script>
+</head>
+
+<body>
+<header>
+    <a href="#content" class="skip">Skip to content</a><br>
+    <nav>
+        <ul class = "nav">
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "menu.html">Menu</a></li>
+            <li><a class = "current" href = "visit.html">Visit Us</a></li>
+            <li><a href = "about.html">About</a></li>
+            <li><a href = "thelaurel.html">The Laurel</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<main>
+<div class= "hero sign">
+</div>
+  <h1> Come Eat </h1>
+  <h2> 3506 MacArthur Blvd<br>(Cross Street 35th Avenue)<br> Oakland, CA </h2>
+  <div class = "description">
+  <p> Join us for a delicious meal. Visit us or call in to make your order. <br>
+  Monday: Closed <br>
+  Tuesday: 730 am - 4pm  <br>
+  Wednesday: 730 am - 4pm <br>
+  Thursday: 730 am - 4pm <br>
+  Friday: 730 am - 4pm <br>
+  Saturday: 730 am - 4pm <br>
+  Sunday: 730 am - 4pm</p>
+</div>
+
+<h1>Join the neighborhood newsletter</h1>
+<form onsubmit="return checkForm();">
+  <div class = "center-text">
+      <fieldset>
+      <legend>Check out discussions happening in the Laurel District!</legend>
+        <label for="name">Full name:</label><br>
+          <input type="text" name="fullname" id="name"><br>
+          <p class="errorMsg" id="nameError">Please enter your name above!</p>
+        <label for= "email">Email:</label><br>
+          <input type="email" name="email" id="email">
+          <p class="errorMsg" id="emailError">Please enter your email!</p>
+      </fieldset><br>
+      <input type="submit" value="Submit">
+  </div>
+</form>
+  <p class = "center-text"> <i class="fas fa-envelope"></i> glennshotdog@gmail.com </p>
+</main>
+<footer>
+   © Copyright 2019, Glenns Hotdogs All Rights Reserved
+</footer>
+
+<!-- <script>
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick)
+</script> -->
+
+</body>
+</html>
